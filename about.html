@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Optional Bootstrap Theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
+    <!-- Custom CSS (Optional) -->
+    <title>My Website</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+         <img class="looo" src="images/logoftr.png"/>
+        </div>
+        <ul class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    
+
+    <section class="about-section">
+        <img src="images/aboutbanners.jpg" alt="About Banner" class="about-image" />
+        <div class="about-text">
+            <h2>Who We Are</h2>
+        </div>
+    </section>
+    
+
+<style>
+    .about-section {
+    position: relative; /* Positioning context for absolute elements */
+    text-align: left; /* Align text to the left */
+}
+
+.about-image {
+    width: 100%; /* Make image responsive */
+    height: 200px; /* Maintain aspect ratio */
+}
+
+.about-text {
+    position: absolute; /* Position text over the image */
+    top: 30px; /* Adjust this value for vertical positioning */
+    left: 30px; /* Adjust this value for horizontal positioning */
+    color: white; /* Text color (adjust as needed) */
+  /* Optional: background for better visibility */
+    padding: 30px; /* Optional: padding around the text */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+@media (max-width: 768px) {
+    .about-text h2 {
+        font-size: 20px; /* Adjust font size for mobile */
+        padding: 5px; /* Adjust padding for mobile */
+    }
+
+    .about-text {
+        top: 10px; /* Adjust top positioning for mobile */
+        left: 10px; /* Adjust left positioning for mobile */
+    }
+    .about-image {
+    width: 100%; /* Make image responsive */
+    height: 100px; /* Maintain aspect ratio */
+}
+}
+
+</style>
+<style>
+    .looo{
+        width: 100%;
+    }
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 70px; /* Add left and right padding */
+
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.nav-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-items li {
+    margin-left: 20px; /* Adjust spacing between items */
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black; /* Change to your preferred color */
+    font-weight: bold;
+}
+
+.nav-items a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background: black;
+    margin: 4px 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-items {
+        display: none; /* Hide nav items by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-items li {
+        margin: 10px 0; /* Space between items on mobile */
+        text-align: center; /* Center text on mobile */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the menu toggle button on mobile */
+    }
+
+    .navbar.active .nav-items {
+        display: flex; /* Show nav items when active */
+    }
+}
+
+</style>
+
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+const navbar = document.querySelector('.navbar');
+
+mobileMenu.addEventListener('click', () => {
+    navbar.classList.toggle('active'); // Toggle the active class on navbar
+});
+
+</script>
+
+
+
+
+<section class="image-text-section">
+    <div class="container">
+        <div class="image-container">
+            <img src="images/3.png" alt="Description of the image">
+        </div>
+        <div class="text-container">
+            <h1>Leading Software Development Company In Hyderabad, India.</h1>
+            <p>ASKMEGURU TECHNOLOGIES is the leading digital platform for all business firms across the world and an one stop automated solution for your trade and industry. ASKMEGURU TECHNOLOGIES began its business operation in bulk SMS and Digital Marketing solutions providing company in December 2013. On the public interest we have done our platform into all over Telangana state focusing exclusively in high quality and cost-effective software development and implementation of services. We are advancing on a tremendous pace and with involvement of 15 + skilled and experienced people working in the organization. Depending on the size and field of your organization, we have different products and services to meet your requirements. We provide the optimum and customized solutions made for your organization. ASKMEGURU is a leading provider of white label search & monetization solutions. We serve a network of more than 100 web publishers globally. Offering core search solutions as a proven means to monetize audience via a search based advertising revenue stream.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .image-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your design */
+}
+
+.image-container {
+    flex: 1;
+}
+
+.text-container {
+    flex: 1;
+    padding: 20px; /* Space around the text */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .text-container {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- Start Fanfact Section -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="fact-section bg-image bg-overlay bg-fixed ptb-100 p-5" style="background-image:url('images/fanfact-bg1.jpg')">
+    <div class="container">
+        <div class="row" id="fact-counter">
+            <!--~~ Start Fact Item ~~-->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="fact-item text-white">
+                    <h3 class="fact-no"><span class="fact-value" data-count="600">0</span>+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div><!--~./ end fact item ~-->
+            <!--~~ Start Fact Item ~~-->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="fact-item text-white">
+                    <h3 class="fact-no"><span class="fact-value" data-count="100">0</span>%</h3>
+                    <p>Satisfied Customers</p>
+                </div>
+            </div><!--~./ end fact item ~-->
+            
+            <!--~~ Start Fact Item ~~-->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="fact-item text-white">
+                    <h3 class="fact-no"><span class="fact-value" data-count="350">0</span>+</h3>
+                    <p>Total Projects</p>
+                </div>
+            </div><!--~./ end fact item ~-->
+            
+            <!--~~ Start Fact Item ~~-->
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="fact-item text-white">
+                    <h3 class="fact-no"><span class="fact-value" data-count="7">0</span>+</h3>
+                    <p>Years Of Exp.</p>
+                </div>
+            </div><!--~./ end fact item ~-->
+        </div>
+    </div>
+</div><!--~./ End fanfact section ~-->
+
+<!-- JavaScript to handle counter functionality -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.fact-value');
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+
+            // Calculate increment
+            const increment = target / 200; // Adjust speed of counting
+
+            if (count < target) {
+                // Increase the count
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1); // Update every 1ms
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+});
+</script>
+
+<style>
+/* [ ## Fact Section ] */
+.fact-section #fact-counter {
+    margin-bottom: -50px;
+}
+
+.fact-item {
+    padding-left: 25px;
+    margin-bottom: 30px; /* Adjusted margin for better spacing */
+}
+
+.fact-item .fact-no {
+    font-size: 48px;
+    margin-bottom: 10px; /* Reduced bottom margin for the counter number */
+    padding-bottom: 10px; /* Adjusted padding */
+    position: relative;
+    margin-top: -10px;
+}
+
+.fact-item .fact-no:before {
+    background-color: #F12C15;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: -25px;
+    position: absolute;
+    width: 60px;
+}
+
+.fact-item > p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4em; /* Increased line height for better readability */
+    margin-top: 5px; /* Added margin-top for spacing */
+}
+
+@media only screen and (max-width: 1199px) {
+    .fact-item .fact-no {
+        font-size: 42px;
+    }
+    .fact-item > p {
+        font-size: 16px;
+        margin-top: 5px; /* Consistent margin on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .fact-item .fact-no {
+        font-size: 36px;
+        margin-bottom: 5px; /* Further reduced margin for smaller screens */
+        padding-bottom: 5px; /* Adjusted padding for smaller screens */
+    }
+    .fact-item > p {
+        font-size: 15px;
+        margin-top: 3px; /* Smaller margin for mobile */
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .fact-item {
+        text-align: center;
+        padding-left: 0;
+    }
+    .fact-item .fact-no {
+        font-size: 32px;
+        margin-bottom: 5px; /* Consistent spacing */
+        padding-bottom: 5px; /* Consistent padding */
+    }
+    .fact-item .fact-no:before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+</style>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+            Start Popular Brands Section
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="popular-brands-section ptb-50">
+            <div class="container">
+                <div class="row">
+                    <!--~~~~~ Start Section Header ~~~~~-->
+                    <div class="col-12 text-center">
+                        <h2 class="section-title class=text-center">Our <span>Clients</span></h2>
+                        <p class="text-center">Discover some of the leading brands we work with in our journey of excellence.</p>
+                        
+                    </div><!--./ section-header -->
+                    <div class="col-12">
+                        <!--~~ Start Brands Carousel ~~-->
+                        <div class="brands-carousel">
+                            <div class="brand-item">
+                                <img src="images/5.png" alt="logo" style="height:70px;">
+                            </div>
+                            <div class="brand-item">
+                                <img src="images/6.png" alt="logo" style="height:70px;">
+                            </div>
+                            <div class="brand-item">
+                                <img src="images/7.png" alt="logo" style="height:70px;">
+                            </div>
+                            <div class="brand-item">
+                                <img src="images/8.png" alt="logo" style="height:70px;">
+                            </div>
+                            <div class="brand-item">
+                                <img src="images/9.png" alt="logo" style="height:70px;">
+                            </div>
+
+                            <div class="brand-item">
+                                <img src="images/10.png" alt="logo" style="height:70px;">
+                            </div>
+                            <div class="brand-item">
+                                <img src="images/11.png" alt="logo" style="height:70px;">
+                            </div>
+                            <div class="brand-item">
+                                <img src="images/12.png" alt="logo" style="height:70px;">
+                            </div>
+                            <div class="brand-item">
+                                <img src="images/13.png" alt="logo" style="height:70px;">
+                            </div>
+                            <!-- Add more brand items here as needed -->
+                        </div><!--~./ end brands carousel ~-->
+                    </div>
+                </div>
+            </div>
+        </div><!--~./ end popular brands section ~-->
+
+        <style>
+            .popular-brands-section {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Optional: Set a background color */
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.section-title span {
+    color: #007BFF; /* Change this to your desired highlight color */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.brands-carousel {
+    display: flex;
+    overflow: hidden; /* Prevent overflow */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.brand-item {
+    display: inline-block; /* Inline for horizontal layout */
+    margin: 0 20px; /* Space between items */
+    animation: scroll 10s linear infinite; /* Animate scroll */
+}
+
+/* Animation for scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start off the right side */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+/* Optional: For responsive design */
+@media (max-width: 768px) {
+    .brand-item img {
+        height: 50px; /* Smaller logos on mobile */
+    }
+}
+
+        </style>
+
+
+
+
+
+
+<!--********************************************************-->
+<!--********************** SITE FOOTER *********************-->
+<!--********************************************************-->
+<footer class="custom-footer bg-image" style="background-image:url('images/footer-bg2.jpg')">
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Footer Widget Area
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="footer-widget-area ptb-60">
+        <div class="container">
+            <div class="row">
+                <!--~~~~~ Start Widget About Footer ~~~~~--> 
+                <div class="col-lg-4">
+                    <aside class="widget custom-about-widget">
+                        <div class="widget-content">
+                            <div class="custom-logo">
+                                <a href="index-3.html"><img src="images/logoftr.png" alt="Logo"></a>
+                            </div>
+                            <p class="text-dark">Software constraints are only confining if you use them for what they're intended to be used for.</p>
+                            <ul class="custom-social-share">
+                                <li><a class="facebook" target="_blank" href="https://www.facebook.com/askmeguru/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" target="_blank" href="https://twitter.com/askmeguru1616/"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="instagram" href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div><!--~./ end about footer widget ~-->
+
+                <!--~~~~~ Start Widget List ~~~~~-->
+                <div class="col-lg-4">
+                    <aside class="widget custom-list-widget">
+                        <h2 class="widget-title text-dark">Featured Cities</h2>
+                        <div class="widget-content">
+                            <ul>
+                                <li><a href="index-2.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div><!--~./ end widget list ~-->
+
+                <!--~~~~~ Start Subscribe Widget~~~~~-->
+                <div class="col-lg-4">
+                    <aside class="widget custom-subscribe-widget">
+                        <h4 class="widget-title text-dark">Our Newsletter</h4>
+                        <div class="widget-content">
+                            <div class="subscribe-box">
+                                <div class="subscribe-form">
+                                    <!-- Subscribe form -->
+                                    <form class="dv-form" id="mc-form">
+                                        <div class="form-group">
+                                            <input id="mc-email" name="EMAIL" placeholder="Enter Your Email Address" type="email">
+                                            <button class="btn btn-default" name="Subscribe" id="subscribe-btn" type="submit">Subscribe Now</button>
+                                        </div>
+                                    </form>
+                                 </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div><!--~./ end subscribe widget ~-->
+            </div>
+        </div>
+    </div>
+    <!--~./ end footer widgets area ~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Footer Bottom Area
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="copyright-text">
+                        <p style="color: #000;">© Copyright 2020 Askmeguru Technologies. All Rights Reserved</p>
+                    </div>
+                </div><!--~./ end copyright ~-->
+            </div>
+        </div>
+    </div><!--~./ end footer bottom area ~-->
+</footer><!--~./ end site footer ~-->
+
+
+<style>
+    .custom-footer {
+    background: url('images/footer-bg2.jpg') no-repeat center center; 
+    background-size: cover;
+    color: #fff; /* Default text color for footer */
+}
+
+/* Footer Widget Area */
+.footer-widget-area {
+    padding: 60px 0;
+}
+
+.custom-about-widget {
+    margin-bottom: 30px;
+}
+
+.custom-logo img {
+    max-width: 100%; /* Responsive logo */
+}
+
+.custom-social-share {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-social-share li {
+    display: inline-block;
+    margin-right: 15px; /* Space between social icons */
+}
+
+.widget-title {
+    color: #fff; /* Change to your preferred title color */
+    margin-bottom: 20px;
+}
+
+.custom-list-widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-list-widget ul li {
+    margin-bottom: 10px;
+}
+
+.custom-list-widget ul li a {
+    color:black; /* Link color */
+    text-decoration: none;
+}
+
+.custom-subscribe-widget .subscribe-form {
+    display: flex;
+}
+
+.custom-subscribe-widget .form-group {
+    flex: 1;
+}
+
+.custom-subscribe-widget input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.custom-subscribe-widget .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Footer Bottom Area */
+.footer-bottom-area {
+   /* Dark overlay for footer bottom */
+    padding: 15px 0;
+}
+
+.copyright-text {
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-widget-area {
+        padding: 30px 0; /* Less padding on mobile */
+    }
+
+    .custom-social-share li {
+        margin-right: 10px; /* Reduce space on mobile */
+    }
+
+    .custom-subscribe-widget .subscribe-form {
+        flex-direction: column;
+    }
+
+    .custom-subscribe-widget input[type="email"] {
+        margin-bottom: 10px; /* Space between input and button */
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Include jQuery and Owl Carousel JS and CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- Include the jQuery library (make sure you include it in your project) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include your custom JS file -->
+<script src="path/to/your/custom.js"></script>
+
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
